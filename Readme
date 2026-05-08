@@ -1,0 +1,246 @@
+# Real Estate API
+
+A RESTful API for managing real estate properties, listings, transactions, and user authentication built with Django REST Framework.
+
+---
+
+# Features
+
+- User Registration
+- User Sign In
+- JWT Authentication
+- User Logout with Token Blacklisting
+- Property Management
+- Listings Management
+- Transactions Management
+- CRUD Operations
+
+---
+
+# Technologies Used
+
+- Python
+- Django
+- Django REST Framework
+- Simple JWT
+- drf-spectacular
+- SQLite
+
+---
+
+# Project Applications
+
+- users
+- properties
+- listings
+- transactions
+
+---
+
+# Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/boluwatife1110/Backend-Capstone.git
+```
+
+```bash
+python -m venv myenv
+```
+
+---
+
+## Activate Virtual Environment
+
+### Windows
+
+```bash
+myenv\Scripts\activate
+```
+
+### Mac/Linux
+
+```bash
+source myenv/bin/activate
+```
+
+---
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Database Migration
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+---
+
+# Run Server
+
+```bash
+python manage.py runserver
+```
+
+Server URL:
+
+```text
+http://127.0.0.1:8000/
+```
+
+---
+
+# Authentication
+
+This API uses JWT Authentication.
+
+---
+
+# Register User
+
+## Endpoint
+
+```http
+POST /users/register/
+```
+
+## Request Body
+
+```json
+{
+  "email": "user@gmail.com",
+  "password": "password123"
+}
+```
+
+---
+
+# Sign In
+
+## Endpoint
+
+```http
+POST /users/signin/
+```
+
+## Request Body
+
+```json
+{
+  "email": "user@gmail.com",
+  "password": "password123"
+}
+```
+
+## Response
+
+```json
+{
+  "message": "Signin successful",
+  "access_token": "your_access_token",
+  "refresh_token": "your_refresh_token"
+}
+```
+
+---
+
+# Logout
+
+## Endpoint
+
+```http
+POST /users/logout/
+```
+
+## Headers
+
+```text
+Authorization: Bearer your_access_token
+```
+
+## Request Body
+
+```json
+{
+  "refresh_token": "your_refresh_token"
+}
+```
+
+---
+
+# API Endpoints
+
+## Listings
+
+| Method | Endpoint |
+|---|---|
+| GET | /listings/ |
+| POST | /listings/ |
+| GET | /listings/{id}/ |
+| PUT | /listings/{id}/ |
+| PATCH | /listings/{id}/ |
+| DELETE | /listings/{id}/ |
+
+---
+
+## Properties
+
+| Method | Endpoint |
+|---|---|
+| GET | /properties/properties/ |
+| POST | /properties/properties/ |
+| GET | /properties/properties/{id}/ |
+| PUT | /properties/properties/{id}/ |
+| PATCH | /properties/properties/{id}/ |
+| DELETE | /properties/properties/{id}/ |
+
+---
+
+## Transactions
+
+| Method | Endpoint |
+|---|---|
+| GET | /transactions/transactions/ |
+| POST | /transactions/transactions/ |
+| GET | /transactions/transactions/{id}/ |
+
+---
+
+# API Documentation
+
+
+
+http://127.0.0.1:8000/api/doc/
+```
+
+
+
+---
+
+# Future Improvements
+
+- Google Authentication
+- Email Verification
+- Image Upload Optimization
+- Property Search & Filtering
+- Favorites/Wishlist System
+- Deployment Optimization
+
+---
+
+# Author
+
+## Woru Michael Boluwatife
+
+Backend Developer | Django REST Framework Developer
+
+---
+
